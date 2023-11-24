@@ -12,10 +12,6 @@ This Netflix clone project replicates the popular streaming platform's interface
 This project is deployed using Vercel and is live at (https://netflix-clone-akb6406.vercel.app/).
 
 
-## Features
-
-- Emulates Netflix's UI with similar functionality.
-- [Add your notable features here]
 
 ## How to Run Locally
 
