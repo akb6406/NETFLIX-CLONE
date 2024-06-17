@@ -5,7 +5,7 @@ import {
 } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const OMDB_API_KEY = "YOUR_OMDB_API_KEY"; // Replace with your OMDb API key
+const OMDB_API_KEY = "b75fe950"; // Replace with your OMDb API key
 const OMDB_BASE_URL = "http://www.omdbapi.com/";
 
 const initialState = {
