@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from "react";
+=======
 import React, { useState } from "react";
+>>>>>>> origin/main
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { IoPlayCircleSharp } from "react-icons/io5";
@@ -19,11 +23,21 @@ export default React.memo(function Card({ index, movieData, isLiked = false }) {
   const [isHovered, setIsHovered] = useState(false);
   const [email, setEmail] = useState(undefined);
 
+<<<<<<< HEAD
+  useEffect(() => {
+    onAuthStateChanged(firebaseAuth, (currentUser) => {
+      if (currentUser) {
+        setEmail(currentUser.email);
+      } else navigate("/login");
+    });
+  }, [navigate]);
+=======
   onAuthStateChanged(firebaseAuth, (currentUser) => {
     if (currentUser) {
       setEmail(currentUser.email);
     } else navigate("/login");
   });
+>>>>>>> origin/main
 
   const addToList = async () => {
     try {
@@ -42,7 +56,11 @@ export default React.memo(function Card({ index, movieData, isLiked = false }) {
       onMouseLeave={() => setIsHovered(false)}
     >
       <img
+<<<<<<< HEAD
+        src={movieData.image}
+=======
         src={`https://image.tmdb.org/t/p/w500${movieData.image}`}
+>>>>>>> origin/main
         alt="card"
         onClick={() => navigate("/player")}
       />
@@ -51,7 +69,11 @@ export default React.memo(function Card({ index, movieData, isLiked = false }) {
         <div className="hover">
           <div className="image-video-container">
             <img
+<<<<<<< HEAD
+              src={movieData.image}
+=======
               src={`https://image.tmdb.org/t/p/w500${movieData.image}`}
+>>>>>>> origin/main
               alt="card"
               onClick={() => navigate("/player")}
             />
@@ -94,8 +116,13 @@ export default React.memo(function Card({ index, movieData, isLiked = false }) {
             </div>
             <div className="genres flex">
               <ul className="flex">
+<<<<<<< HEAD
+                {movieData.genres.map((genre, index) => (
+                  <li key={index}>{genre}</li>
+=======
                 {movieData.genres.map((genre) => (
                   <li>{genre}</li>
+>>>>>>> origin/main
                 ))}
               </ul>
             </div>
@@ -107,23 +134,42 @@ export default React.memo(function Card({ index, movieData, isLiked = false }) {
 });
 
 const Container = styled.div`
+<<<<<<< HEAD
+  width: 230px;
+  height: 345px; /* Set a fixed height to maintain uniformity */
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+=======
   max-width: 230px;
   width: 230px;
   height: 100%;
   cursor: pointer;
   position: relative;
+>>>>>>> origin/main
   img {
     border-radius: 0.2rem;
     width: 100%;
     height: 100%;
+<<<<<<< HEAD
+    object-fit: cover;
+=======
+>>>>>>> origin/main
     z-index: 10;
   }
   .hover {
     z-index: 99;
+<<<<<<< HEAD
+    height: 345px; /* Match the fixed height */
+    width: 230px; /* Match the fixed width */
+    position: absolute;
+    top: 0;
+=======
     height: max-content;
     width: 20rem;
     position: absolute;
     top: -18vh;
+>>>>>>> origin/main
     left: 0;
     border-radius: 0.3rem;
     box-shadow: rgba(0, 0, 0, 0.75) 0px 3px 10px;
@@ -154,6 +200,12 @@ const Container = styled.div`
     .info-container {
       padding: 1rem;
       gap: 0.5rem;
+<<<<<<< HEAD
+      .name {
+        margin: 0;
+      }
+=======
+>>>>>>> origin/main
     }
     .icons {
       .controls {
@@ -161,7 +213,11 @@ const Container = styled.div`
         gap: 1rem;
       }
       svg {
+<<<<<<< HEAD
+        font-size: 1.5rem;
+=======
         font-size: 2rem;
+>>>>>>> origin/main
         cursor: pointer;
         transition: 0.3s ease-in-out;
         &:hover {
@@ -171,7 +227,13 @@ const Container = styled.div`
     }
     .genres {
       ul {
+<<<<<<< HEAD
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+=======
         gap: 1rem;
+>>>>>>> origin/main
         li {
           padding-right: 0.7rem;
           &:first-of-type {
