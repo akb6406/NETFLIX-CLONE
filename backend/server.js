@@ -6,15 +6,14 @@ const mongoose = require("mongoose");
 const app = express();
 
 app.use(cors({
-<<<<<<< HEAD
+
   origin: ["https://NETFLIX-CLONE.vercel.app"],
   methods: ["POST", "GET"],
   credentials: true
-=======
-origin:["https://NETFLIX-CLONE.vercel.app"],
-  methods:["POST", "GET"],
-credentials: true
->>>>>>> origin/main
+  // origin:["https://NETFLIX-CLONE.vercel.app"],
+  //   methods:["POST", "GET"],
+  // credentials: true
+
 }));
 app.use(express.json());
 
